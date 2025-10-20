@@ -1,8 +1,8 @@
 <?php
 
-namespace BradyRenting\FilamentPasswordless\Tests\__mocks__\Models;
+namespace Seeders\FilamentPasswordless\Tests\__mocks__\Models;
 
-use BradyRenting\FilamentPasswordless\Tests\__mocks__\database\factories\UserFactory;
+use Seeders\FilamentPasswordless\Tests\__mocks__\database\factories\UserFactory;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

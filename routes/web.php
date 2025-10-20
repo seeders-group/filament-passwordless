@@ -1,6 +1,6 @@
 <?php
 
-use BradyRenting\FilamentPasswordless\Http\Controllers\HandleMagicLinkController;
+use Seeders\FilamentPasswordless\Http\Controllers\HandleMagicLinkController;
 use Filament\Facades\Filament;
 use Illuminate\Support\Facades\Route;
 

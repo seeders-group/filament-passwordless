@@ -1,8 +1,8 @@
 <?php
 
-namespace BradyRenting\FilamentPasswordless\Tests\__mocks__\database\factories;
+namespace Seeders\FilamentPasswordless\Tests\__mocks__\database\factories;
 
-use BradyRenting\FilamentPasswordless\Tests\__mocks__\Models\User;
+use Seeders\FilamentPasswordless\Tests\__mocks__\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class UserFactory extends Factory

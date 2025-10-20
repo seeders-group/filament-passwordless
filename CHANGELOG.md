@@ -2,6 +2,44 @@
 
 All notable changes to `filament-passwordless` will be documented in this file.
 
+## 3.0.0 - TBD
+
+### Breaking Changes
+
+* **Package renamed from `bradyrenting/filament-passwordless` to `seeders/filament-passwordless`**
+* **Namespace changed from `BradyRenting\FilamentPasswordless` to `Seeders\FilamentPasswordless`**
+* Upgraded to Filament v4
+* Upgraded minimum PHP version to 8.2+
+* Upgraded minimum Laravel version to 11.28+
+* Migrated Livewire components from `Http\Livewire` to `Livewire` namespace
+* Updated all dependencies to be compatible with Filament v4
+* Upgraded Pest to v4
+* Upgraded PHPUnit to v12
+* Replaced abandoned `nunomaduro/larastan` with `larastan/larastan`
+
+### Migration Guide
+
+If you're upgrading from v2.x, you'll need to:
+1. Update your composer.json: `composer require seeders/filament-passwordless`
+2. Update all namespace references from `BradyRenting\FilamentPasswordless` to `Seeders\FilamentPasswordless`
+3. Update your config file if published: change namespace in `config/filament-passwordless.php`
+4. Run `composer dump-autoload`
+
+### What's Changed
+
+* Complete migration to Filament v4 architecture
+* Updated component registration for Livewire 3 compatibility
+* Modernized namespace structure following Filament v4 conventions
+* Updated Login component to implement `HasForms` and use `InteractsWithForms` trait
+* Changed `$view` property from static to instance property for Filament v4 compatibility
+* Updated form method signature to use `Schema` instead of `Form` parameter
+* Fixed Livewire validation error bag initialization with `getErrorBag()` override
+* Updated login view to use standard HTML form instead of deprecated Blade components
+* Upgraded test suite to Pest v4 with updated configuration
+* Updated PHPUnit configuration to v12 schema
+* Updated PHPStan extensions to v2 for compatibility
+* All tests now passing (8/8 tests, 22 assertions)
+
 ## 2.2.0 - 2025-06-10
 
 ### What's Changed

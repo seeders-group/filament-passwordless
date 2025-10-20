@@ -1,35 +1,36 @@
 <?php
 
-namespace BradyRenting\FilamentPasswordless\Http\Livewire\Auth;
+namespace Seeders\FilamentPasswordless\Livewire\Auth;
 
-use BradyRenting\FilamentPasswordless\FilamentPasswordlessPlugin;
-use BradyRenting\FilamentPasswordless\MagicLink;
+use Seeders\FilamentPasswordless\FilamentPasswordlessPlugin;
+use Seeders\FilamentPasswordless\MagicLink;
 use DanHarrin\LivewireRateLimiting\Exceptions\TooManyRequestsException;
 use DanHarrin\LivewireRateLimiting\WithRateLimiting;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Contracts\HasForms;
+use Filament\Schemas\Schema;
 use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Pages\SimplePage;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\MessageBag;
 
 use function __;
 use function array_key_exists;
 
-/**
- * @property Form $form
- */
-class Login extends SimplePage
+class Login extends SimplePage implements HasForms
 {
     use InteractsWithFormActions;
+    use InteractsWithForms;
     use WithRateLimiting;
 
     public const RATE_LIMIT = 5;
 
-    protected static string $view = 'filament-passwordless::login';
+    protected string $view = 'filament-passwordless::login';
 
     public $data = [
         'email' => '',
@@ -38,13 +39,18 @@ class Login extends SimplePage
 
     public $submitted = false;
 
+    public function getErrorBag()
+    {
+        return parent::getErrorBag() ?? new MessageBag();
+    }
+
     public function mount(): void
     {
         if (Filament::auth()->check()) {
             redirect()->intended(Filament::getUrl());
         }
 
-        $this->form->fill();
+        $this->form->fill($this->data);
     }
 
     public function authenticate()
@@ -61,7 +67,7 @@ class Login extends SimplePage
 
         $model = app(FilamentPasswordlessPlugin::class)->getModel($data['email']);
 
-        if (! is_null($model)) {
+        if (!is_null($model)) {
             $magicLink = MagicLink::create($model, $data['remember']);
 
             $mailableClass = config('filament-passwordless.mailable_for_magic_link');
@@ -91,9 +97,9 @@ class Login extends SimplePage
             ->danger();
     }
 
-    public function form(Form $form): Form
+    public function form(Schema $schema): Schema
     {
-        return $form
+        return $schema
             ->schema([
                 TextInput::make('email')
                     ->label(__('filament-panels::pages/auth/login.form.email.label'))

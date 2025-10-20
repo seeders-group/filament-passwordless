@@ -1,10 +1,10 @@
 <?php
 
-namespace BradyRenting\FilamentPasswordless\Tests;
+namespace Seeders\FilamentPasswordless\Tests;
 
-use BradyRenting\FilamentPasswordless\FilamentPasswordlessPlugin;
-use BradyRenting\FilamentPasswordless\FilamentPasswordlessServiceProvider;
-use BradyRenting\FilamentPasswordless\Tests\__mocks__\Models\User;
+use Seeders\FilamentPasswordless\FilamentPasswordlessPlugin;
+use Seeders\FilamentPasswordless\FilamentPasswordlessServiceProvider;
+use Seeders\FilamentPasswordless\Tests\__mocks__\Models\User;
 use Filament\Actions\ActionsServiceProvider;
 use Filament\Facades\Filament;
 use Filament\FilamentServiceProvider;
@@ -24,10 +24,8 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
-        $this->withoutExceptionHandling();
-
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'BradyRenting\\FilamentPasswordless\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Seeders\\FilamentPasswordless\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
 
         $this->app?->make(Kernel::class)->pushMiddleware(StartSession::class);

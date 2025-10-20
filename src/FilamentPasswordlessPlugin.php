@@ -1,8 +1,8 @@
 <?php
 
-namespace BradyRenting\FilamentPasswordless;
+namespace Seeders\FilamentPasswordless;
 
-use BradyRenting\FilamentPasswordless\Http\Livewire\Auth\Login;
+use Seeders\FilamentPasswordless\Livewire\Auth\Login;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Illuminate\Contracts\Auth\Authenticatable;

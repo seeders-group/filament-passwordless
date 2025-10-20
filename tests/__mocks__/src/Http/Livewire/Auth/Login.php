@@ -1,8 +1,8 @@
 <?php
 
-namespace BradyRenting\FilamentPasswordless\Tests\__mocks__\src\Http\Livewire\Auth;
+namespace Seeders\FilamentPasswordless\Tests\__mocks__\src\Http\Livewire\Auth;
 
-use BradyRenting\FilamentPasswordless\Http\Livewire\Auth\Login as BaseLogin;
+use Seeders\FilamentPasswordless\Livewire\Auth\Login as BaseLogin;
 
 class Login extends BaseLogin
 {

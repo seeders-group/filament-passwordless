@@ -1,7 +1,7 @@
 <?php
 
-use BradyRenting\FilamentPasswordless\Tests\__mocks__\database\factories\UserFactory;
-use BradyRenting\FilamentPasswordless\Tests\__mocks__\src\Http\Livewire\Auth\Login;
+use Seeders\FilamentPasswordless\Tests\__mocks__\database\factories\UserFactory;
+use Seeders\FilamentPasswordless\Tests\__mocks__\src\Http\Livewire\Auth\Login;
 use Filament\Facades\Filament;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\Mail;

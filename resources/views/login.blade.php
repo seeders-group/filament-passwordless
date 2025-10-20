@@ -13,15 +13,17 @@
     {{ FilamentView::renderHook(PanelsRenderHook::AUTH_LOGIN_FORM_BEFORE, scopes: $this->getRenderHookScopes()) }}
 
     @if(! $this->submitted)
-        <x-filament-panels::form id="form" wire:submit.prevent="authenticate">
+        <form id="form" wire:submit.prevent="authenticate">
             @csrf
             {{ $this->form }}
 
-            <x-filament-panels::form.actions
-                    :actions="$this->getCachedFormActions()"
-                    :full-width="$this->hasFullWidthFormActions()"
-            />
-        </x-filament-panels::form>
+            <x-filament::button
+                type="submit"
+                class="w-full"
+            >
+                {{ __('filament-panels::pages/auth/login.form.actions.authenticate.label') }}
+            </x-filament::button>
+        </form>
     @else
         <p>
             {{ __('filament-passwordless::filament-passwordless.messages.magic_link_sent') }}

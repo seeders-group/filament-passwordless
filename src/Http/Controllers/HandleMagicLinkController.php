@@ -1,10 +1,10 @@
 <?php
 
-namespace BradyRenting\FilamentPasswordless\Http\Controllers;
+namespace Seeders\FilamentPasswordless\Http\Controllers;
 
-use BradyRenting\FilamentPasswordless\FilamentPasswordlessPlugin;
+use Seeders\FilamentPasswordless\FilamentPasswordlessPlugin;
 use Filament\Facades\Filament;
-use Filament\Http\Responses\Auth\Contracts\LoginResponse;
+use Filament\Auth\Http\Responses\Contracts\LoginResponse;
 use Illuminate\Routing\Controller;
 
 class HandleMagicLinkController extends Controller

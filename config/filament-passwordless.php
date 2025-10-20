@@ -14,5 +14,5 @@ return [
     /**
      * The mailable that will be used to send the magic link verification email.
      */
-    'mailable_for_magic_link' => \BradyRenting\FilamentPasswordless\Mail\MagicLinkVerification::class,
+    'mailable_for_magic_link' => \Seeders\FilamentPasswordless\Mail\MagicLinkVerification::class,
 ];

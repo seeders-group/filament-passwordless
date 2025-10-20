@@ -1,6 +1,6 @@
 <?php
 
-namespace BradyRenting\FilamentPasswordless;
+namespace Seeders\FilamentPasswordless;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\URL;

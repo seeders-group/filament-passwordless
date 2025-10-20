@@ -1,7 +1,7 @@
 <?php
 
-use BradyRenting\FilamentPasswordless\MagicLink;
-use BradyRenting\FilamentPasswordless\Tests\__mocks__\database\factories\UserFactory;
+use Seeders\FilamentPasswordless\MagicLink;
+use Seeders\FilamentPasswordless\Tests\__mocks__\database\factories\UserFactory;
 use Carbon\Carbon;
 
 test('it can generate a magic link', function () {

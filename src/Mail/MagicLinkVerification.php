@@ -1,8 +1,8 @@
 <?php
 
-namespace BradyRenting\FilamentPasswordless\Mail;
+namespace Seeders\FilamentPasswordless\Mail;
 
-use BradyRenting\FilamentPasswordless\MagicLink;
+use Seeders\FilamentPasswordless\MagicLink;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;

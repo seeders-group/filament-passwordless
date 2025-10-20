@@ -1,50 +1,49 @@
 {
-    "name": "bradyrenting/filament-passwordless",
+    "name": "seeders/filament-passwordless",
     "description": "Passwordless authentication for Filament",
     "keywords": [
-        "bradyrenting",
+        "seeders",
         "laravel",
         "filament-passwordless"
     ],
-    "homepage": "https://github.com/bradyrenting/filament-passwordless",
+    "homepage": "https://github.com/seeders/filament-passwordless",
     "license": "MIT",
     "authors": [
         {
-            "name": "Brady Renting",
-            "email": "dev@bradyrenting.nl",
+            "name": "Jesse Hendriks",
+            "email": "jesse.hendriks@seeders.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.2",
         "filament/filament": "^4.0",
         "spatie/laravel-package-tools": "^1.14",
-        "illuminate/contracts": "^9.0|^10.0|^11.0"
+        "illuminate/contracts": "^11.28"
     },
     "require-dev": {
         "filament/support": "^4.0",
-        "filament/upgrade": "^4.0",
         "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^6.0|^7.0|^8.1",
-        "nunomaduro/larastan": "^2.0",
-        "orchestra/testbench": "^7.22|^8.0|^9.0",
-        "pestphp/pest": "^3.0",
-        "pestphp/pest-plugin-laravel": "^3.0",
-        "pestphp/pest-plugin-livewire": "^3.0",
+        "nunomaduro/collision": "^8.1",
+        "larastan/larastan": "^3.0",
+        "orchestra/testbench": "^9.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0",
+        "pestphp/pest-plugin-livewire": "^4.0",
         "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0",
         "spatie/laravel-ray": "^1.26"
     },
     "autoload": {
         "psr-4": {
-            "BradyRenting\\FilamentPasswordless\\": "src",
-            "BradyRenting\\FilamentPasswordless\\Tests\\Database\\Factories\\": "tests/database/factories"
+            "Seeders\\FilamentPasswordless\\": "src",
+            "Seeders\\FilamentPasswordless\\Tests\\Database\\Factories\\": "tests/__mocks__/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BradyRenting\\FilamentPasswordless\\Tests\\": "tests"
+            "Seeders\\FilamentPasswordless\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -67,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BradyRenting\\FilamentPasswordless\\FilamentPasswordlessServiceProvider"
+                "Seeders\\FilamentPasswordless\\FilamentPasswordlessServiceProvider"
             ],
             "aliases": {
-                "FilamentPasswordless": "BradyRenting\\FilamentPasswordless\\Facades\\FilamentPasswordless"
+                "FilamentPasswordless": "Seeders\\FilamentPasswordless\\Facades\\FilamentPasswordless"
             }
         }
     },
