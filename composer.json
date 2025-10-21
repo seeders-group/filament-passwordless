@@ -1,5 +1,5 @@
 {
-    "name": "seeders/filament-passwordless",
+    "name": "seeders-group/filament-passwordless",
     "description": "Passwordless authentication for Filament",
     "keywords": [
         "seeders",
