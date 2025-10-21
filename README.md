@@ -20,7 +20,7 @@ Filament Passwordless is a package for [Filament v4](https://filamentphp.com/) t
 You can install the package via composer:
 
 ```bash
-composer require seeders/filament-passwordless
+composer require seeders-group/filament-passwordless
 ```
 
 You can publish the config file with:
