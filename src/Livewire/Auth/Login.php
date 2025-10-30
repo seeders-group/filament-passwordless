@@ -30,7 +30,7 @@ class Login extends SimplePage implements HasForms
 
     public const RATE_LIMIT = 5;
 
-    protected string $view = 'filament-passwordless::login';
+    protected static string $view = 'filament-passwordless::login';
 
     public $data = [
         'email' => '',
